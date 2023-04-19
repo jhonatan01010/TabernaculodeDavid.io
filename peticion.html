@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML</title>
+  <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- HTML -->
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="peticion.css">
+  
+</head>
+
+<body>
+  <header>
+
+        <div class="container__menu">
+            <div class="logo">
+                <a href="index.html">
+                <img src="/img/logo.png" alt=""></a>
+            </div>
+            <div class="menu">
+                <i class="fas fa-bars" id="btn_menu"></i>
+                <div id="back_menu"></div>
+                <nav id="nav">
+                    <img src="/img/logo.png"
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="#">Servicios</a></li>
+                        <li><a href="ubicacion.html">Ubicación</a></li>
+                        <li><a href="Aportaciones.html">Aportaciones</a></li>
+                  <li><a href="Transmiciones.html">Transmiciones</a></li>
+                   <button class="switch" id="switch">
+                     <span></span>
+                     <span></span>
+                   </button>
+                    </ul>
+                    
+                </nav>
+                
+            </div>
+        </div>
+
+    </header>
+<!-- Texto img -->
+    <main>
+        <div class="container__cover">
+            <div class="cover">
+                <div class="text">
+                    <h1>Queremos orar por ti</h1>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Textto -->
+    <p class="textt">
+      Déjanos tu petición de oración y tus datos, queremos<br>conocerte y mantenernos en contacto contigo.
+      </p>
+      
+      <p class="texttt">
+        El Señor está cerca de quienes lo invocan, de quienes lo invocan en verdad<br> Salmos 145:18
+      </p>
+      <!-- Formulario -->
+      <form id="form" class="form">
+        <div class="form_container">
+          <h2 class="form_title">
+            Peticiones
+          </h2>
+          <input type="text" class="form_input" placeholder="Nombre: " id="name" name="name" required>
+          <input type="Email" class="form_input" placeholder="Email: " required id="" name="email">
+          
+          <select class="form_select" name="selectores" required id="selectores">
+            <option value="+">Selecciona tu País</option>
+            <option value="+501">Belice</option>
+            <option value="+502">
+              Guatemala</option>
+            <option>
+              El Salvador</option>
+            <option>
+              Honduras
+            </option>
+            <option>
+              Nicaragua</option>
+            <option>
+              Costa Rica</option>
+            <option>
+              Panamá</option>
+                  
+                </select>
+          <input type="tel" class="form_inputtel" id="txtvau" placeholder="Telefono: "name="numero" id="numero" required>
+        <div class="tooltip">
+          <i class="fa-solid fa-circle-info"></i>
+  <span class="tooltiptext">
+    Coloca el Código de área<br>de tu País.
+  </span>
+</div>
+
+          <textarea class="form_input form_input--message" placeholder="Petición" name="mensaje" id="mensaje"></textarea>
+          
+          
+        </div>
+        <div class="center">
+
+      <button type="submit" onclick="mostrar()">Enviar</button>
+    </div>
+      </form>
+      <!--Ventana Modal-->
+      <div class="modal-container">
+        <div class=" modal modal-close">
+          
+          <img src="/img/icons8-comprobado.svg">
+          <div class="modal-textos">
+            <h2>Enviado Correctamente</h2>
+            <p>Tú peticiónfue enviado...</p>
+          </div>
+        </div>
+      </div>
+</body>
+
+
+
+<script src="/peticion.js"></script>
+</html>

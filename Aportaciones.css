@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+@import url(//db.onlinewebfonts.com/c/319f084531baf60194e74c8d66f482bd?family=Neue);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+  background-color: #F1FAFF;
+}
+body.dark {
+  background: #303030;
+}
+/*Navbar*/
+
+header{
+    width: 100%;
+    height: 80px;
+    margin-top: 40px;
+    position: fixed;
+    z-index: 1;
+}
+
+.container__menu{
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    width: 100px;
+    background-color: #fff;
+    border-radius: 10px;
+
+}
+.menu{ 
+  display: flex; 
+  align-items: center;
+  
+}
+.menu ul {
+  display: flex;
+}
+.menu ul li{
+    list-style: none;
+    margin-left: 36px;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+/*.menu ul li a:hover{
+  color: #DFF1FF;
+}*/
+
+#selected{
+    font-weight: 800;
+    color: #fff;
+    
+}
+
+.menu nav img{
+    display: none;
+}
+
+ .menu #btn_menu{
+    font-size: 50px;
+    color: #fff;
+    display: none;
+}
+/*Switch */
+.switch {
+  background: #bebebe;
+  border-radius: 1000px;
+  border: none;
+  margin-left: 36px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  outline: none;
+  
+}
+.switch::after{
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: #fff;
+  top: 0;
+  left: 0;
+  transform: scale(0.8);
+  right: unset;
+  border-radius: 100px;
+  
+}
+.switch.active {
+  background-color: #666666;
+}
+.switch.active:after {
+  right: 0;
+  left: unset;
+  background: #303030;
+  transform: scale(0.8);
+}
+.switch span {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  background: none;
+  color: none;
+}
+
+/*COVER*/
+
+
+.container__cover{
+    height: 50vh;
+    width: 100%;
+    background: #2E5D93;
+    background-image: url(/img/imgdonar.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.cover{
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container-img{
+  background: #fff;
+  border-radius: 10px;
+}
+.container__cover .text{
+    max-width: 60rem;
+}
+
+.container__cover .text h1{
+    font-size: 2.2rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    padding-left: 10rem;
+}
+.container__cover .text input{ 
+  padding: 10px 40px; 
+  margin-left: 25rem;
+  border: none; 
+  font-size: 30px; 
+  font-family: "Neue";
+  border-radius: 50px; 
+  margin-top: 40px; 
+  background: #FFAD2E;
+  font-weight: 600;
+  color: #063663; 
+  cursor: pointer;
+  
+}
+
+/*Haciendo la página Responsive*/
+
+@media screen and (max-width:1200px){
+
+    header{
+        padding: 40px;
+    }
+     
+
+}
+
+@media screen and (max-width: 720px){
+  .container__cover{
+    height: 70vh;
+    width: 100%;
+  }
+  .container__cover .text input{
+    font-size: 20px;
+    margin-left: 2.5rem;
+    padding: 15px 15px; 
+  }
+  body.dark .menu nav {
+    background: #C8C8C8;
+  }
+    .menu nav{
+        position: fixed;
+        top: 0;
+        right: -250px;
+        background: white;
+        width: 200px;
+        height: 100vh;
+        padding: 40px;
+        z-index: 1;
+        transition: all 300ms;
+    }
+    .menu ul{
+      display: flex;
+      flex-direction: column;
+      margin-top: 40px;
+    }
+
+    .menu ul li{
+        margin-top: 30px;
+        margin-left: 0;
+    }
+    body.dark .menu ul li a {
+      color: #303030;
+      /*font-weight: lighter;*/
+    }
+    .menu ul li a{
+        color: #bebebe;
+    }
+    body.dark #selected{
+      color: #fff;
+      background: #303030;
+    }
+    #selected{
+        padding: 10px 10px;
+        border-radius: 50px;
+        color: #fff;
+        font-weight: 800;
+        background: #2E5D93;
+    }
+
+    .menu nav img{
+        display: block;
+        width: 100px;
+    }
+    .logo img {
+      width: 90px;
+      height: 90px;
+      padding-top: -50px;
+    }
+
+    #back_menu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0,0,0,0.5);
+        display: none;
+    }
+    body.dark .menu #btn_menu{
+      color: #C8C8C8;
+    }
+    .menu #btn_menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 1.5rem;
+        height: 1.5rem;
+        color: #fff;
+        font-size: 24px;
+        cursor: pointer;
+        transition: all 300ms;
+    }
+
+    .menu #btn_menu:hover{
+        background: rgba(255, 255, 255, 0.2);
+    }
+    .container__cover .text h1 {
+      font-size: 1.5rem;
+      align-items: center;
+      padding-left: 40px;
+      text-align: center;
+      padding-right: 40px;
+    }
+    .container__cover .text input {
+      padding: 10px 40px; 
+      margin-left: 1rem;
+      border: none; 
+      font-size: 20px; 
+      margin-left: 8rem;
+    }
+    .switch {
+      margin-top: -40px;
+      margin-left: 0;
+      position: absolute;
+    }
+}
+
+/* Img Bancos */
+body.dark .container-img {
+  background: #C8C8C8;
+  border-radius: 40px;
+  color: #bebebe;
+  font-weight: bold;
+}
+body.dark .container-img p{
+  color: #898989;
+  font-weight: bold;
+}
+body.dark .container-img span {
+  color: #898989;
+  font-weight: lighter;
+}
+.container-img {
+  width: 90%;
+  margin: 10px auto 10px;
+  padding: 20px;
+  margin-top: 40px;
+  display: block;
+}
+.container-img img {
+  width: 60%;
+  padding-top: 5%;
+  margin-left: 10rem;
+  height: auto;
+}
+.container-img p {
+  font-size: 50px;
+  text-align: center;
+  color: #bebebe;
+  font-weight: 700;
+  padding: 20px;
+}
+.container-img span{
+  font-weight: lighter;
+  font-size: 40px;
+  color: #bebebe;
+}
+@media ( max-width: 950px){
+  .container-img{
+    width: 90%;
+    margin: 10px auto;
+  }
+}
+@media (max-width: 565px){
+  .container-img p {
+    font-size: 20px;
+  }
+  .container-img img {
+    margin-left: 4rem;
+    width: 60%;
+  }
+  .container-img span {
+    font-size: 15px;
+  }
+}
